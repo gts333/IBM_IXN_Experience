@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myname
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myname
+  template:
+    metadata:
+      labels:
+        app: myname
+    spec:
+      containers:
+        - name: myname
+          image: uk.icr.io/testeee/myrepo@sha256:7ef1387514f75e88922602329da67a785faaac6ef7e0afe7fc6ca2a97d8446e8
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myservice
+  labels:
+    mylabelkey: mylabelvalue
+spec:
+  selector:
+    app: myname
+  type: NodePort
+  ports:
+    - port: 8080
+      nodePort: 31514
+
