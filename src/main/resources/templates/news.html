@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/normalize.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/news.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/animate/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <title>IXN student registration</title>
+</head>
+<body>
+<div class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/homepage.html"><h1>IXN Online
+                Experience</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav  ms-auto">
+                    <a class="nav-link " href="${pageContext.request.contextPath}/forum.html"><h2>&nbsp;&nbsp;Forum&nbsp;&nbsp;</h2>
+                    </a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/news.html"><h2>&nbsp;&nbsp;News&nbsp;&nbsp;</h2>
+                    </a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/info.html"><h2>&nbsp;&nbsp;Info&nbsp;&nbsp;</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-fill">
+        <%--        the back to top button--%>
+        <button type="button" class="btn btn-secondary btn-floating btn-lg" id="btn-back-to-top">
+            <i class="bi bi-chevron-up"></i>
+        </button>
+    </main>
+    <footer class="p-2">
+        <p class="text-sm-center" id="footerText">Site design by Tangsheng Geng at UCL for IXN </p>
+        <div class="text-sm-center" id="footerLinks">
+            <a href="${pageContext.request.contextPath}/admin.html" class="link-secondary">Admin Login</a>
+            <a href="${pageContext.request.contextPath}/privacy.html" class="link-secondary">Privacy Policy</a>
+            <a href="${pageContext.request.contextPath}/contact.html" class="link-secondary">Contact us</a>
+        </div>
+    </footer>
+</div>
+<script src="${pageContext.request.contextPath}/bootstrap/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/jquery/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/js/news.js"></script>
+</body>
+</html>

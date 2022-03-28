@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>IXN Forum</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/forum.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+
+
+</head>
+<body>
+<%--the contextPath to be passed to javascript--%>
+<input id="contextPath" type="hidden" value=${pageContext.request.contextPath}>
+<div class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/homepage.html"><h1>IXN Online
+                Experience</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav  ms-auto">
+                    <a class="nav-link active" href="${pageContext.request.contextPath}/forum.html"><h2>&nbsp;&nbsp;Forum&nbsp;&nbsp;</h2>
+                    </a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/news.html"><h2>&nbsp;&nbsp;News&nbsp;&nbsp;</h2>
+                    </a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/info.html"><h2>&nbsp;&nbsp;Info&nbsp;&nbsp;</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-fill">
+        <div class="container p-2" id="forumContainer">
+            <div class="container">
+                <div class="row p-2 pe-3">
+                    <div class="form-group col-10 ">
+                        <label class="d-none" for="searchBar"></label>
+                        <input type="text" class="form-control form-control-lg" id="searchBar"
+                               placeholder="Enter the topic of the post">
+                    </div>
+                    <button class="btn btn-primary btn-lg btn-dark col-2 px-4" id="searchButton">Search
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+                <hr/>
+            </div>
+            <div class="container" id="newPostContainer">
+                <form id="newPost" class="p-3">
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label for="newTitle"><strong>Topic</strong> (less than 60 characters)</label>
+                            <input type="text" class="form-control" id="newTitle" placeholder="Input your topic here">
+                        </div>
+                        <div class="form-group col-6">
+                            <label for="newName"><strong>Name</strong> (less than 20 characters)</label>
+                            <input type="text" class="form-control" id="newName" placeholder="Input your name here">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="newContent"><strong>Content</strong> (less than 1000 characters)</label>
+                        <textarea class="form-control" id="newContent" rows="4"
+                                  placeholder="ask or discuss anything you would like to know about IXN :)"></textarea>
+                    </div>
+                </form>
+                <button type="button" class="btn btn-primary btn-lg col-12 postButton btn-dark rounded-0">post to
+                    forum
+                </button>
+            </div>
+            <div class="container">
+                <button type="button" class="btn btn-primary btn-lg col-12 toggleButton rounded-0">add new topic
+                </button>
+                <hr>
+            </div>
+            <div class="container" id="forumPostsContainer"></div>
+            <div class="container" id="forumPaginationContainer">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        <li class="page-item disabled" id="previous">
+                            <button class="page-link" tabindex="-1" onclick=previous()>Previous</button>
+                        </li>
+                        <li class="page-item active" id="page1">
+                            <button class="page-link" onclick=loadRequiredPosts(1)>1</button>
+                        </li>
+                        <li class="page-item disabled" id="next">
+                            <button class="page-link" onclick=next()>Next</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+    <footer class="p-2">
+        <p class="text-sm-center" id="footerText">Site design by Tangsheng Geng at UCL for IXN </p>
+        <div class="text-sm-center" id="footerLinks">
+            <a href="${pageContext.request.contextPath}/admin.html" class="link-secondary">Admin Login</a>
+            <a href="${pageContext.request.contextPath}/privacy.html" class="link-secondary">Privacy Policy</a>
+            <a href="${pageContext.request.contextPath}/contact.html" class="link-secondary">Contact us</a>
+        </div>
+    </footer>
+</div>
+
+
+<script src="${pageContext.request.contextPath}/bootstrap/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/jquery/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/js/forum.js"></script>
+
+</body>
+</html>

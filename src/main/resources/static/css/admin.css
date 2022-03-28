@@ -1,0 +1,23 @@
+.navbar-nav > a{
+    border-left: darkgray 1px solid;
+    font-family: 'Courier New', Courier, monospace;
+    color:darkgrey!important;
+}
+.navbar-nav > a:hover{
+    color:black!important;
+}
+a.active{
+    color:black!important;
+}
+.navbar-brand{
+    font-family: 'Courier New', Courier, monospace;
+}
+/*the above is css for the navigation bar*/
+
+footer{
+    background-color: black;
+}
+#footerText{
+    color: darkgray;
+}
+/*the above is css for the footer*/

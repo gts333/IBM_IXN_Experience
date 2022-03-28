@@ -1,0 +1,102 @@
+.navbar-nav > a {
+    border-left: darkgray 1px solid;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkgrey !important;
+}
+
+.navbar-nav > a:hover {
+    color: black !important;
+}
+
+a.active {
+    color: black !important;
+}
+
+.navbar-brand {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*the above is css for the navigation bar*/
+
+footer {
+    background-color: black;
+}
+
+#footerText {
+    color: darkgray;
+}
+
+/*the above is css for the footer*/
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: hsla(90, 1%, 42%, 0.5);
+    border: none;
+}
+#btn-back-to-top:hover {
+    background-color: hsla(90, 2%, 75%, 0.5);
+}
+
+/*the above is css for the backToTop button*/
+
+.thumbnail {
+    position: relative;
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.caption {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.responsiveText {
+    font-size: calc(8px + 2vw);
+    color: white;
+    font-family: Garamond, serif;
+}
+#caption1 {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    width: 40%;
+    height: 100%;
+    color: white;
+    font-size: calc(8px + 2.5vw);
+    background-color: rgba(0,0,0, 0.5);
+}
+#caption2 {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    width: 40%;
+    height: 100%;
+    color: white;
+    font-size: calc(8px + 2.5vw);
+    background-color: rgba(0,0,0, 0.5);
+}
+#caption3 {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    width: 40%;
+    height: 100%;
+    color: white;
+    font-size: calc(8px + 2.5vw);
+    background-color: rgba(0,0,0, 0.5);
+}
+#caption4 {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    width: 40%;
+    height: 100%;
+    color: white;
+    font-size: calc(8px + 2.5vw);
+    background-color: rgba(0,0,0, 0.5);
+}

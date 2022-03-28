@@ -1,0 +1,218 @@
+.navbar-nav > a {
+    border-left: darkgray 1px solid;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkgrey !important;
+}
+
+.navbar-nav > a:hover {
+    color: black !important;
+}
+
+a.active {
+    color: black !important;
+}
+
+.navbar-brand {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*the above is css for the navigation bar*/
+
+footer {
+    background-color: black;
+}
+
+#footerText {
+    color: darkgray;
+}
+
+/*the above is css for the footer*/
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: hsla(90, 1%, 42%, 0.5);
+    border: none;
+}
+#btn-back-to-top:hover {
+    background-color: hsla(90, 2%, 75%, 0.5);
+}
+
+/*the above is css for the backToTop button*/
+a{
+    text-decoration: none;
+}
+.thumbnail {
+    position: relative;
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.caption {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.responsiveText {
+    font-size: calc(8px + 2vw);
+    color: white;
+    font-family: Garamond, serif;
+}
+
+#caption1 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 100%;
+    color: white;
+    animation-duration: 3s;
+}
+
+#caption2 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 100%;
+    color: white;
+    animation-duration: 3s;
+    animation-delay: 1500ms;
+}
+
+#caption3 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    width: 100%;
+    animation-duration: 3s;
+    animation-delay: 2000ms;
+}
+
+.downButton {
+    background-color: transparent;
+    border: none;
+    color: darkgray;
+    font-size: calc(7px + 1vw);
+}
+
+.downButton:hover {
+    color: white;
+}
+
+#caption4 {
+    display: none;
+    background-color: transparent;
+    font-size: calc(8px + 2.5vw);
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 100%;
+    color: white;
+}
+
+#caption5 {
+    display: none;
+    font-size: calc(8px + 1vw);
+    position: absolute;
+    top: 42%;
+    left: 30%;
+    width: 100%;
+    color: gainsboro;
+}
+#caption5:hover{
+    color: white;
+}
+#caption6 {
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    width: 20%;
+    background-color: transparent;
+    border: none;
+}
+#caption7 {
+    display: none;
+    background-color: transparent;
+    font-size: calc(8px + 2.5vw);
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    width: 100%;
+    color: black;
+    animation-duration: 3s;
+}
+
+#caption8 {
+    display: none;
+    background-color: transparent;
+    font-size: calc(8px + 1vw);
+    position: absolute;
+    top: 42%;
+    left: 45%;
+    width: 100%;
+    color: black;
+}
+#caption8:hover{
+    color: #696969;
+}
+#caption9 {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 20%;
+    background-color: transparent;
+    border: none;
+}
+#selectRowDiv{
+    position: relative;
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+#selectRowTitle{
+    background-color: black;
+    color: white;
+}
+#studentText{
+    position: absolute;
+    top: 50%;
+    left: 16.1%;
+    width: 34.6%;
+    height: 100%;
+    font-size: calc(8px + 3vw);
+    background-color: rgba(0,0,0, 0.5);
+    border: none;
+}
+#studentText:hover{
+    background-color: rgba(0,0,0, 0.1);
+}
+#universityText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 33.4%;
+    height: 100%;
+    font-size: calc(8px + 3vw);
+    background-color: rgba(0,0,0, 0.5);
+    border: none;
+}
+#universityText:hover{
+    background-color: rgba(0,0,0, 0.1);
+}
+#industryText{
+    position: absolute;
+    top: 50%;
+    left: 83.3%;
+    width: 33.3%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    font-size: calc(8px + 3vw);
+    border: none;
+}
+#industryText:hover{
+    background-color: rgba(0,0,0, 0.1);
+}

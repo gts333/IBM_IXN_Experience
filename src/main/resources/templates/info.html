@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/normalize.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/info.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/animate/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <title>IXN student registration</title>
+</head>
+<body>
+<div class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/homepage.html"><h1>IXN Online
+                Experience</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav  ms-auto">
+                    <a class="nav-link " href="${pageContext.request.contextPath}/forum.html"><h2>&nbsp;&nbsp;Forum&nbsp;&nbsp;</h2>
+                    </a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/news.html"><h2>&nbsp;&nbsp;News&nbsp;&nbsp;</h2>
+                    </a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/info.html"><h2>&nbsp;&nbsp;Info&nbsp;&nbsp;</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-fill">
+        <div class="container">
+            <div class="row p-2 pe-3">
+                <div class="display-4 p-2 text-center py-4">
+                    Search or ask anything related to IXN
+                    <br>
+                </div>
+                <div class="form-group col-10 ">
+                    <label class="d-none" for="searchBar"></label>
+                    <input type="text" class="form-control form-control-lg" id="searchBar"
+                           placeholder="">
+                </div>
+                <button class="btn btn-primary btn-lg btn-dark col-2 px-4" id="searchButton">Search
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+            <div class="container" id="searchResult">
+
+            </div>
+            <hr/>
+        </div>
+        <div class="container">
+            <div class="responsiveText" id="title"><strong>Q & A on Industry Exchange Network</strong></div>
+            <button class="responsiveText entity" id="1">
+                <i class="bi bi-chevron-right" id="icon1"></i>&nbsp;What is Industry Exchange Network?</button>
+            <div class="responsiveTextContent d-none" id="content1">
+                Ghana were in the tournament's Group C, alongside Algeria, Senegal and South Africa.[8] CAF labelled this the "group of death" as a result of the strength of the four teams.[9] Ghana's opening game took place on 19 January 2015, against Senegal in Mongomo.[10] Ghana took the lead on 14 minutes through a penalty by André Ayew, after Christian Atsu had been fouled, but Senegal equalised in the second half through Mame Biram Diouf. Moussa Sow, a Senegalese substitute, then scored in the third minute of injury time, to give his team a 2–1 win.[11] In their second game, Ghana faced Algeria on 23 January in Mongomo.[12] The match remained goalless until injury time at the end in the second half, when Ghana took the lead as Asamoah Gyan scored from a long pass by Mubarak Wakaso.[13] Going into the final pair of games in the group, all four nations had an opportunity to qualify for the quarter-finals, but wins for Ghana and Algeria ensured they qualified in first and second place respectively. Ghana fell behind to a volley by South African Mandla Masango in their game, played on 27 January in Mongomo, but a John Boye equaliser on 73 minutes, followed by an Ayew goal gave them a 2–1 win and first place in the group.[14][15]
+            </div>
+            <button class="responsiveText entity" id="2">
+                <i class="bi bi-chevron-right" id="icon2"></i>&nbsp;What attracts so many great enterprises and universites to join IXN?</button>
+            <div class="responsiveTextContent d-none" id="content2">
+                Ghana were in the tournament's Group C, alongside Algeria, Senegal and South Africa.[8] CAF labelled this the "group of death" as a result of the strength of the four teams.[9] Ghana's opening game took place on 19 January 2015, against Senegal in Mongomo.[10] Ghana took the lead on 14 minutes through a penalty by André Ayew, after Christian Atsu had been fouled, but Senegal equalised in the second half through Mame Biram Diouf. Moussa Sow, a Senegalese substitute, then scored in the third minute of injury time, to give his team a 2–1 win.[11] In their second game, Ghana faced Algeria on 23 January in Mongomo.[12] The match remained goalless until injury time at the end in the second half, when Ghana took the lead as Asamoah Gyan scored from a long pass by Mubarak Wakaso.[13] Going into the final pair of games in the group, all four nations had an opportunity to qualify for the quarter-finals, but wins for Ghana and Algeria ensured they qualified in first and second place respectively. Ghana fell behind to a volley by South African Mandla Masango in their game, played on 27 January in Mongomo, but a John Boye equaliser on 73 minutes, followed by an Ayew goal gave them a 2–1 win and first place in the group.[14][15]
+            </div>
+            <button class="responsiveText entity" id="3">
+                <i class="bi bi-chevron-right" id="icon3"></i>&nbsp;Who are the members IXN?</button>
+            <div class="responsiveTextContent d-none" id="content3">
+                IBM, UCL etc
+            </div>
+        </div>
+
+        <%--        the back to top button--%>
+        <button type="button" class="btn btn-secondary btn-floating btn-lg" id="btn-back-to-top">
+            <i class="bi bi-chevron-up"></i>
+        </button>
+    </main>
+    <footer class="p-2">
+        <p class="text-sm-center" id="footerText">Site design by Tangsheng Geng at UCL for IXN </p>
+        <div class="text-sm-center" id="footerLinks">
+            <a href="${pageContext.request.contextPath}/admin.html" class="link-secondary">Admin Login</a>
+            <a href="${pageContext.request.contextPath}/privacy.html" class="link-secondary">Privacy Policy</a>
+            <a href="${pageContext.request.contextPath}/contact.html" class="link-secondary">Contact us</a>
+        </div>
+    </footer>
+</div>
+<script src="${pageContext.request.contextPath}/bootstrap/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/jquery/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/js/info.js"></script>
+</body>
+</html>

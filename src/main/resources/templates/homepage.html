@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>IXN Online Experience</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/normalize.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/homepage.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/animate/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+</head>
+<body>
+<%--the contextPath to be passed to javascript--%>
+<input id="contextPath" type="hidden" value=${pageContext.request.contextPath}/>
+<div class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/homepage.html"><h1>IXN Online
+                Experience</h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav  ms-auto">
+                    <a class="nav-link " href="${pageContext.request.contextPath}/forum.html"><h2>&nbsp;&nbsp;Forum&nbsp;&nbsp;</h2>
+                    </a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/news.html"><h2>&nbsp;&nbsp;News&nbsp;&nbsp;</h2>
+                    </a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/info.html"><h2>&nbsp;&nbsp;Info&nbsp;&nbsp;</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-fill">
+        <div class="thumbnail text-center">
+            <img class="img-fluid" src="${pageContext.request.contextPath}/images/nasa.jpg" id="nasa" alt="nasa">
+            <div class="caption animate__animated animate__fadeIn text-center display-1" id="caption1">
+                Communicate, Innovate, Succeed.
+            </div>
+            <div class="caption animate__animated animate__fadeIn text-center responsiveText" id="caption2">
+                Join the Industry Exchange Network to explore thousands of opportunities
+            </div>
+            <div class="caption animate__animated animate__fadeIn text-center" id="caption3">
+                <button class="text-decoration-none  text-center responsiveText downButton" id="downButton1">
+                    learn more
+                    <br>
+                    <i class="bi bi-chevron-compact-down"></i>
+                </button>
+            </div>
+        </div>
+        <div class="thumbnail text-center">
+            <img class="img-fluid" src="${pageContext.request.contextPath}/images/cooperation.jpg" id="cooperation"
+                 alt="cooperation">
+            <div class="caption text-center responsiveText" id="caption4">
+                The Network that brings together<br> Universities, Industries and Students
+            </div>
+            <a href="${pageContext.request.contextPath}/info.html">
+                <div class="caption  text-center responsiveText" id="caption5">
+                    &nbsp;<i class="bi bi-chevron-right"></i>&nbsp;Find out more about what is the Industry Exchange
+                    Network
+                </div>
+            </a>
+            <div class="caption  text-center responsiveText" id="caption6">
+                <button class="text-decoration-none  text-center responsiveText downButton" id="downButton2">
+                    <i class="bi bi-chevron-compact-down" style="font-size: 7vw;"></i>
+                </button>
+            </div>
+        </div>
+        <div class="thumbnail text-center">
+            <img class="img-fluid" src="${pageContext.request.contextPath}/images/city.jpg" id="city"
+                 alt="city">
+            <div class="caption  text-center responsiveText" id="caption7">
+                Consists of and favored by global leading<br> enterprises and high ranked universities
+            </div>
+            <a href="${pageContext.request.contextPath}/info.html">
+                <div class="caption  text-center responsiveText" id="caption8">
+                    &nbsp;&nbsp;<i class="bi bi-chevron-right"></i>&nbsp;Find out more about why they choose to join
+                </div>
+            </a>
+            <div class="caption  text-center responsiveText" id="caption9">
+                <button class="text-decoration-none  text-center responsiveText downButton" id="downButton3">
+                    <i class="bi bi-chevron-compact-down" style="font-size: 7vw;"></i>
+                </button>
+            </div>
+        </div>
+        <div class="text-center responsiveText" id="selectRowTitle">
+            <br>Select a role to learn more about how IXN benefits you
+        </div>
+        <div class="thumbnail" id="selectRowDiv">
+            <img class="img-fluid" src="${pageContext.request.contextPath}/images/selectRow.jpg" id="selectRowImage"
+                 alt="selectRow">
+            <a href="${pageContext.request.contextPath}/student.html">
+                <div class="caption responsiveText role" id="studentText"><br><br><br>
+                    Student
+                </div>
+            </a>
+            <a href="${pageContext.request.contextPath}/university.html">
+                <div class="caption responsiveText role" id="universityText"><br><br><br>
+                    University
+                </div>
+            </a>
+            <a href="${pageContext.request.contextPath}/industry.html">
+                <div class="caption responsiveText role" id="industryText"><br><br><br>
+                    Industry
+                </div>
+            </a>
+        </div>
+
+
+        <%--        the back to top button--%>
+        <button type="button" class="btn btn-secondary btn-floating btn-lg" id="btn-back-to-top">
+            <i class="bi bi-chevron-up"></i>
+        </button>
+    </main>
+    <footer class="p-2">
+        <p class="text-sm-center" id="footerText">Site design by Tangsheng Geng at UCL for IXN </p>
+        <div class="text-sm-center" id="footerLinks">
+            <a href="${pageContext.request.contextPath}/admin.html" class="link-secondary">Admin Login</a>
+            <a href="${pageContext.request.contextPath}/privacy.html" class="link-secondary">Privacy Policy</a>
+            <a href="${pageContext.request.contextPath}/contact.html" class="link-secondary">Contact us</a>
+        </div>
+    </footer>
+
+</div>
+<script src="${pageContext.request.contextPath}/bootstrap/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/jquery/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/js/homepage.js"></script>
+
+</body>
+</html>

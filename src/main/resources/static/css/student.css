@@ -1,0 +1,220 @@
+.navbar-nav > a {
+    border-left: darkgray 1px solid;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkgrey !important;
+}
+
+.navbar-nav > a:hover {
+    color: black !important;
+}
+
+a.active {
+    color: black !important;
+}
+
+.navbar-brand {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*the above is css for the navigation bar*/
+
+footer {
+    background-color: black;
+}
+
+#footerText {
+    color: darkgray;
+}
+
+/*the above is css for the footer*/
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: hsla(90, 1%, 42%, 0.5);
+    border: none;
+}
+#btn-back-to-top:hover {
+    background-color: hsla(90, 2%, 75%, 0.5);
+}
+
+/*the above is css for the backToTop button*/
+
+.downButton {
+    background-color: transparent;
+    border: none;
+    color: darkgray;
+    font-size: calc(7px + 1vw);
+}
+.downButton:hover {
+    color: white;
+}
+.thumbnail {
+    position: relative;
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.caption {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.responsiveText {
+    font-size: calc(8px + 2vw);
+    color: white;
+    font-family: Garamond, serif;
+}
+
+#caption1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: calc(8px + 2.5vw);
+    background-color: rgba(0,0,0, 0.5);
+}
+#registeredStudent{
+    font-size: calc(8px + 1.5vw);
+    color: floralwhite;
+    text-decoration: none;
+}
+#registeredStudent:hover{
+    text-decoration: underline;
+}
+#newStudent{
+    font-size: calc(8px + 1.5vw);
+    color: floralwhite;
+    text-decoration: none;
+}
+#newStudent:hover{
+    text-decoration: underline;
+}
+#registeredStudent > p{
+    animation-delay: 1s;
+}
+#newStudent > p{
+    animation-delay: 2s;
+}
+
+#caption2 {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: 40%;
+    height: 100%;
+    color: white;
+    font-size: calc(8px + 2.5vw);
+    background-color: rgba(0,0,0, 0.5);
+}
+#caption2 > p{
+    font-size: calc(3px + 1.5vw);
+}
+
+#caption3 {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    width: 40%;
+    height: 100%;
+    color: white;
+    font-size: calc(8px + 2.5vw);
+    background-color: rgba(0,0,0, 0.5);
+}
+#caption3 > p{
+    font-size: calc(3px + 1.5vw);
+}
+
+#caption4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 100%;
+    color: white;
+    font-size: calc(8px + 2.5vw);
+    background-color: rgba(0,0,0, 0.5);
+}
+#caption4 > p{
+    font-size: calc(3px + 1.5vw);
+}
+#caption5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    height: 100%;
+    color: white;
+    font-size: calc(8px + 2.5vw);
+    background-color: rgba(0,0,0, 0.5);
+}
+
+#optionText0{
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    width: 100%;
+    height: 8%;
+    font-size: calc(8px + 3vw);
+    background-color: rgba(0,0,0, 0.5);
+
+}
+#optionText1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 100%;
+    height: 24%;
+    font-size: calc(8px + 3vw);
+    background-color: rgba(0,0,0, 0.5);
+    border-top: white 1px solid;
+    border-bottom:white 1px solid; ;
+}
+#optionText1:hover{
+    background-color: rgba(0,0,0, 0.1);
+}
+#optionText2{
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    width: 100%;
+    height: 24%;
+    font-size: calc(8px + 3vw);
+    background-color: rgba(0,0,0, 0.5);
+    border-top: white 1px solid;
+    border-bottom:white 1px solid; ;
+}
+#optionText2:hover{
+    background-color: rgba(0,0,0, 0.1);
+}
+#optionText3{
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    width: 100%;
+    height: 24%;
+    background-color: rgba(0,0,0, 0.5);
+    font-size: calc(8px + 3vw);
+    border-top: white 1px solid;
+    border-bottom:white 1px solid; ;
+}
+#optionText3:hover{
+    background-color: rgba(0,0,0, 0.1);
+}
+#optionText4{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 100%;
+    height: 20%;
+    font-size: calc(8px + 3vw);
+    background-color: rgba(0,0,0, 0.5);
+
+}
+

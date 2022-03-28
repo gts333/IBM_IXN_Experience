@@ -1,0 +1,42 @@
+.navbar-nav > a{
+    border-left: darkgray 1px solid;
+    font-family: 'Courier New', Courier, monospace;
+    color:darkgrey!important;
+}
+.navbar-nav > a:hover{
+    color:black!important;
+}
+a.active{
+    color:black!important;
+}
+.navbar-brand{
+    font-family: 'Courier New', Courier, monospace;
+}
+/*the above is css for the navigation bar*/
+footer{
+    background-color: black;
+}
+#footerText{
+    color: darkgray;
+}
+/*the above is css for the footer*/
+
+#postContainer{
+    background-color:#F5F5F5;
+}
+.postArea{
+    min-height: 500px;
+}
+.authorAndPostTime{
+    position: absolute;
+    bottom: 0;
+}
+#newCommentContainer{
+    display: none;
+}
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
