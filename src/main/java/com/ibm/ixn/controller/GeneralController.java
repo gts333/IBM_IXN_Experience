@@ -6,11 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class GeneralController {
 
-//    @RequestMapping(value = "/")
-//    public String loginPage() {
-//        return "homepage";
-//    }
-
     @RequestMapping(value = "/admin.html")
     public String admin() {
         return "admin";

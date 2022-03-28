@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ibm.ixn.dao.PostDao">
+    <resultMap id="PostMap" type="Post">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="postTime" column="post_time"/>
+    </resultMap>
+
+
+    <insert id="addPost" parameterType="Post">
+        insert into posts (name, title, content, post_time) values( #{name}, #{title}, #{content}, #{postTime})
+    </insert>
+    <delete id="removePost">
+        delete from posts where id = #{id}
+    </delete>
+    <select id="getAllPosts" resultMap="PostMap">
+        select * from posts
+    </select>
+    <select id="getPostCounts" resultType="java.lang.Integer">
+        select count(*) from posts
+    </select>
+    <select id="getRequiredRangeOfPosts" resultMap="PostMap">
+        select * from posts limit #{begin}, #{step}
+    </select>
+    <select id="getPostById" resultMap="PostMap">
+        select * from posts where id = #{id}
+    </select>
+    <select id="getPostsByTitle" resultMap="PostMap">
+        select * from posts where title like '%' #{title} '%'
+    </select>
+
+</mapper>
