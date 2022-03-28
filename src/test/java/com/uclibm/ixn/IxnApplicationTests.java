@@ -1,4 +1,4 @@
-package com.ibm.ixn;
+package com.uclibm.ixn;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.ibm.ixn.domain;
+package com.uclibm.ixn.domain;
 
 import lombok.Data;
 

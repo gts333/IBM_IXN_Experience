@@ -1,9 +1,9 @@
-package com.ibm.ixn.controller;
+package com.uclibm.ixn.controller;
 
 
-import com.ibm.ixn.domain.Comment;
-import com.ibm.ixn.domain.Post;
-import com.ibm.ixn.service.ForumService;
+import com.uclibm.ixn.domain.Comment;
+import com.uclibm.ixn.domain.Post;
+import com.uclibm.ixn.service.ForumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

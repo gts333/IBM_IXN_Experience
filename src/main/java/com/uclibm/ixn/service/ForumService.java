@@ -1,7 +1,7 @@
-package com.ibm.ixn.service;
+package com.uclibm.ixn.service;
 
-import com.ibm.ixn.domain.Comment;
-import com.ibm.ixn.domain.Post;
+import com.uclibm.ixn.domain.Comment;
+import com.uclibm.ixn.domain.Post;
 
 
 import java.util.List;

@@ -1,6 +1,6 @@
-package com.ibm.ixn.dao;
+package com.uclibm.ixn.dao;
 
-import com.ibm.ixn.domain.Post;
+import com.uclibm.ixn.domain.Post;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -57,6 +57,6 @@ public interface PostDao {
      * @param title the title (or part of the title)
      * @return the post
      */
-    List<Post> getPostsByTitle(String title);
+    List<Post> getPostsByTitle(@Param("title") String title);
 
 }

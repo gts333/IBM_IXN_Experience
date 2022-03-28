@@ -1,6 +1,6 @@
-package com.ibm.ixn.dao;
+package com.uclibm.ixn.dao;
 
-import com.ibm.ixn.domain.Comment;
+import com.uclibm.ixn.domain.Comment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;

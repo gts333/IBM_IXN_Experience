@@ -1,4 +1,4 @@
-package com.ibm.ixn.dao;
+package com.uclibm.ixn.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;

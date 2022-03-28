@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ibm.ixn.dao.PostDao">
+<mapper namespace="com.uclibm.ixn.dao.PostDao">
     <resultMap id="PostMap" type="Post">
         <id property="id" column="id"/>
         <result property="name" column="name"/>
@@ -31,7 +31,8 @@
         select * from posts where id = #{id}
     </select>
     <select id="getPostsByTitle" resultMap="PostMap">
-        select * from posts where title like '%' #{title} '%'
+        <bind name="pattern" value="'%' + title + '%'"/>
+        select * from posts where  title like #{pattern}
     </select>
 
 </mapper>

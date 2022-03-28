@@ -1,7 +1,7 @@
-package com.ibm.ixn.controller;
+package com.uclibm.ixn.controller;
 
-import com.ibm.ixn.domain.Post;
-import com.ibm.ixn.service.AdminService;
+import com.uclibm.ixn.domain.Post;
+import com.uclibm.ixn.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +13,7 @@ import java.util.List;
 
 @Controller
 public class AdminController {
-    
+
     private AdminService adminService;
 
     @RequestMapping("/adminLogin.do")
@@ -55,10 +55,10 @@ public class AdminController {
             return "an error occurred, this is recorded";
         }
     }
-    
+
     @Autowired
     public void setAdminService(AdminService adminService) {
         this.adminService = adminService;
     }
-    
+
 }

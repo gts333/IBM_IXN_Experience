@@ -1,17 +1,14 @@
 server:
   port: 8080
 spring:
-  datasource:
-    druid:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/ixn
-      username: admin
-      password: 20000602
   transaction:
     rollback-on-commit-failure: true
   thymeleaf:
     #TODO: close when developing, open when online
     cache: false
+  profiles:
+    include: datasource
+
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*.xml
-  typeAliasesPackage: com.ibm.ixn.domain
+  typeAliasesPackage: com.uclibm.ixn.domain

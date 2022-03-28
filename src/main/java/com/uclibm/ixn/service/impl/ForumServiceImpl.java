@@ -1,10 +1,10 @@
-package com.ibm.ixn.service.impl;
+package com.uclibm.ixn.service.impl;
 
-import com.ibm.ixn.dao.CommentDao;
-import com.ibm.ixn.dao.PostDao;
-import com.ibm.ixn.domain.Comment;
-import com.ibm.ixn.domain.Post;
-import com.ibm.ixn.service.ForumService;
+import com.uclibm.ixn.dao.CommentDao;
+import com.uclibm.ixn.dao.PostDao;
+import com.uclibm.ixn.domain.Comment;
+import com.uclibm.ixn.domain.Post;
+import com.uclibm.ixn.service.ForumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
