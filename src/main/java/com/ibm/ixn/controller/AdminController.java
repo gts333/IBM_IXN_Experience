@@ -15,20 +15,21 @@ public class AdminController {
 
 //    private AdminService adminService;
 //
-//    @RequestMapping("/adminLogin.do")
-//    public ModelAndView adminLogin(String username, String password){
+    @RequestMapping("/adminLogin.do")
+    public ModelAndView adminLogin(String username, String password){
 //        Boolean matches = adminService.adminLogin(username, password);
-//        if(matches){
-//            ModelAndView modelAndView = new ModelAndView("adminPortal");
-//            modelAndView.addObject("adminName", username);
-//            return modelAndView;
-//        }else{
-//            ModelAndView modelAndView = new ModelAndView("admin");
-//            modelAndView.addObject("invalid", "invalid");
-//            return modelAndView;
-//        }
-//    }
-//
+        //todo 改这里！！！
+        if(true){
+            ModelAndView modelAndView = new ModelAndView("adminPortal");
+            modelAndView.addObject("adminName", username);
+            return modelAndView;
+        }else{
+            ModelAndView modelAndView = new ModelAndView("admin");
+            modelAndView.addObject("invalid", "invalid");
+            return modelAndView;
+        }
+    }
+
 //    @RequestMapping("/adminSearchPostsByTitle/{title}.do")
 //    @ResponseBody
 //    public List<Post> adminGetPostsByTitle(@PathVariable("title")String title){
@@ -54,8 +55,8 @@ public class AdminController {
 //            return "an error occurred, this is recorded";
 //        }
 //    }
-//
-//
+
+
 //
 //    @Autowired
 //    public void setAdminService(AdminService adminService) {

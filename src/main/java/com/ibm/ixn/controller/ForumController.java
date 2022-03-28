@@ -1,6 +1,7 @@
 package com.ibm.ixn.controller;
 
 
+import com.ibm.ixn.domain.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,22 +21,23 @@ public class ForumController {
 //
 //
 //
-//    //Adding a new post
-//    @RequestMapping(value = "/addPost.do", produces = "text/plain;charset=utf-8", method = RequestMethod.POST)
-//    @ResponseBody
-//    public String addPost(String title, String name, String content){
-//        Post post = new Post();
-//        post.setTitle(title);
-//        post.setName(name);
-//        post.setContent(content);
-//        post.setPostTime(new Timestamp(System.currentTimeMillis()));
+    //Adding a new post
+    @RequestMapping(value = "/addPost.do", produces = "text/plain;charset=utf-8", method = RequestMethod.POST)
+    @ResponseBody
+    public String addPost(String title, String name, String content){
+        Post post = new Post();
+        post.setTitle(title);
+        post.setName(name);
+        post.setContent(content);
+        post.setPostTime(new Timestamp(System.currentTimeMillis()));
+//        todo change here !!!
 //        boolean result = forumService.addPost(post);
-//        if(result){
-//            return "posted successfully";
-//        } else {
-//            return "an error occurred, the error is recorded";
-//        }
-//    }
+        if(true){
+            return "posted successfully";
+        } else {
+            return "an error occurred, the error is recorded";
+        }
+    }
 //
 //    //Get post count
 //    @RequestMapping(value = "/getPostsCount.do")
@@ -65,13 +67,15 @@ public class ForumController {
 //    }
 //
 //
-//    //Get required post page by post id
-//    @RequestMapping(value = "/getPostPage/{id}.do")
-//    public String getPostPage(Model model, @PathVariable int id){
+    //Get required post page by post id
+    @RequestMapping(value = "/getPostPage/{id}.do")
+    public String getPostPage(Model model, @PathVariable int id){
 //        Post post = forumService.getPostById(id);
-//        model.addAttribute("post", post);
-//        return "post";
-//    }
+        //todo change here!
+        Post post = new Post();
+        model.addAttribute("post", post);
+        return "post";
+    }
 //
 //    //Get required comments by post id
 //    @RequestMapping(value = "/getComments/{id}.do")
