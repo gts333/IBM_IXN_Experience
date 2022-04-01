@@ -8,4 +8,4 @@ However if you are interested in taking a look(but not trying to exploit its vul
 
 The application makes use of the IBM DB2 online database.  
 
-The project began in January, but the initial commit took place in late March. This is because the project has gone through a refractor process incorporating springboot and the old repository has been cleared. 
+The project began in January, but the initial commit took place in late March. This is because the project has gone through a refactor process incorporating springboot and the old repository has been cleared. 
