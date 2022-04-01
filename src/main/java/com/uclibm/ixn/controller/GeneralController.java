@@ -46,6 +46,11 @@ public class GeneralController {
         return "privacy";
     }
 
+    @RequestMapping(value = "/projects.html")
+    public String projects() {
+        return "projects";
+    }
+
     @RequestMapping(value = "/registration.html")
     public String registration() {
         return "registration";

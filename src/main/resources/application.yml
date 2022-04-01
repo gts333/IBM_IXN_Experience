@@ -1,8 +1,8 @@
 server:
   port: 8080
 spring:
-  transaction:
-    rollback-on-commit-failure: true
+#  transaction:
+#    rollback-on-commit-failure: true
   thymeleaf:
     #TODO: close when developing, open when online
     cache: false

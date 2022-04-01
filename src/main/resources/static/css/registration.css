@@ -1,22 +1,4 @@
-.navbar-nav > a {
-    border-left: darkgray 1px solid;
-    font-family: 'Courier New', Courier, monospace;
-    color: darkgrey !important;
-}
 
-.navbar-nav > a:hover {
-    color: black !important;
-}
-
-a.active {
-    color: black !important;
-}
-
-.navbar-brand {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-/*the above is css for the navigation bar*/
 
 footer {
     background-color: black;
@@ -41,12 +23,19 @@ footer {
 
 /*the above is css for the backToTop button*/
 
+.main{
+    min-height: 100%;
+    height: 100%;
+}
+
+
 .thumbnail {
-    position: relative;
+    /*position: relative;*/
     display: block;
     border: none;
     margin: 0;
     padding: 0;
+
 }
 
 .caption {
@@ -60,43 +49,53 @@ footer {
     color: white;
     font-family: Garamond, serif;
 }
+
+
 #caption1 {
     position: absolute;
     top: 50%;
-    left: 80%;
-    width: 40%;
+    left: 15%;
+    width: 30%;
     height: 100%;
     color: white;
     font-size: calc(8px + 2.5vw);
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(0,0,0,0.9);
+}
+#texture1{
+    height: 100vh;
+    width: 100vw;
 }
 #caption2 {
     position: absolute;
     top: 50%;
-    left: 80%;
-    width: 40%;
+    left: 15%;
+    width: 30%;
     height: 100%;
     color: white;
     font-size: calc(8px + 2.5vw);
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(0,0,0,0.9);
 }
-#caption3 {
-    position: absolute;
-    top: 50%;
-    left: 80%;
-    width: 40%;
-    height: 100%;
-    color: white;
-    font-size: calc(8px + 2.5vw);
-    background-color: rgba(0,0,0, 0.5);
+#texture2{
+    height: 100vh;
+    width: 100vw;
 }
-#caption4 {
-    position: absolute;
-    top: 50%;
-    left: 80%;
-    width: 40%;
-    height: 100%;
-    color: white;
-    font-size: calc(8px + 2.5vw);
-    background-color: rgba(0,0,0, 0.5);
-}
+/*#caption3 {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 80%;*/
+/*    width: 40%;*/
+/*    height: 100%;*/
+/*    color: white;*/
+/*    font-size: calc(8px + 2.5vw);*/
+/*    background-color: rgba(0,0,0, 0.5);*/
+/*}*/
+/*#caption4 {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 80%;*/
+/*    width: 40%;*/
+/*    height: 100%;*/
+/*    color: white;*/
+/*    font-size: calc(8px + 2.5vw);*/
+/*    background-color: rgba(0,0,0, 0.5);*/
+/*}*/
