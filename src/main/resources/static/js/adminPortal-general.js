@@ -12,7 +12,7 @@ function generalClicked(){
     adminPortalForNews.addClass("d-none");
     adminPortalForProjects.addClass("d-none");
     adminPortalForInfo.addClass("d-none");
-    window.scrollTo(0,0)
+    window.scrollTo(0,0);
 }
 function forumClicked(){
     adminPortalForGeneral.addClass("d-none");
@@ -20,7 +20,8 @@ function forumClicked(){
     adminPortalForNews.addClass("d-none");
     adminPortalForProjects.addClass("d-none");
     adminPortalForInfo.addClass("d-none");
-    window.scrollTo(0,0)
+    window.scrollTo(0,0);
+    forumPortalInitialize();
 }
 function newsClicked(){
     adminPortalForGeneral.addClass("d-none");
@@ -28,7 +29,7 @@ function newsClicked(){
     adminPortalForNews.removeClass("d-none");
     adminPortalForProjects.addClass("d-none");
     adminPortalForInfo.addClass("d-none");
-    window.scrollTo(0,0)
+    window.scrollTo(0,0);
 }
 function projectsClicked(){
     adminPortalForGeneral.addClass("d-none");
@@ -36,7 +37,7 @@ function projectsClicked(){
     adminPortalForNews.addClass("d-none");
     adminPortalForProjects.removeClass("d-none");
     adminPortalForInfo.addClass("d-none");
-    window.scrollTo(0,0)
+    window.scrollTo(0,0);
 }
 function infoClicked(){
     adminPortalForGeneral.addClass("d-none");
@@ -44,5 +45,6 @@ function infoClicked(){
     adminPortalForNews.addClass("d-none");
     adminPortalForProjects.addClass("d-none");
     adminPortalForInfo.removeClass("d-none");
-    window.scrollTo(0,0)
+    window.scrollTo(0,0);
+    infoPortalInitialize();
 }

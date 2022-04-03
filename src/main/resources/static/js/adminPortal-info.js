@@ -2,7 +2,7 @@ var contextPath = $("#contextPath").val();
 var adminPortalForInfoContainer = $("#adminPortalForInfoContainer");
 var toggleButton = $("#addInfo");
 var addButton = $("#confirmAddInfo");
-infoPortalInitialize();
+
 function infoPortalInitialize(){
     adminPortalForInfoContainer.empty();
     var newTopic = $("#newTopic");

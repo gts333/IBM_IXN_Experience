@@ -75,4 +75,20 @@ public interface ForumService {
      */
     Boolean deleteCommentById(Integer id, Integer floor);
 
+
+    /**
+     * delete the post along with all the comments
+     * @param id the id of the post
+     * @return whether successfully deleted
+     */
+    Boolean adminDeletePostById(Integer id);
+
+    /**
+     *
+     * @param id the id of the post
+     * @param floor the floor of the comment
+     * @return whether successfully deleted
+     */
+    Boolean adminDeleteComment(Integer id, Integer floor);
+
 }

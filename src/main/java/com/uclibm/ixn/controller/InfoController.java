@@ -23,12 +23,12 @@ public class InfoController {
         Info info = new Info();
         info.setTopic(topic);
         info.setContent(content);
-        return infoService.addInfo(info) == 1?"added successfully! Notice there might be a delay, try refresh later if something doesn't look right":"an error occurred";
+        return infoService.addInfo(info) == 1?"added successfully, there might be a delay in updating the website":"an error occurred";
     }
 
     @DeleteMapping
     public String deleteEntityByTopic(String topic){
-        return infoService.removeInfoByTopic(topic) == 1?"deleted successfully! Notice there might be a delay, try refresh later if something doesn't look right":"an error occurred";
+        return infoService.removeInfoByTopic(topic) == 1?"deleted successfully, there might be a delay in updating the website":"an error occurred";
     }
 
     @Autowired

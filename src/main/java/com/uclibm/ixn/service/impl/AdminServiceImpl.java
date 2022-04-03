@@ -19,8 +19,6 @@ import java.util.List;
 public class AdminServiceImpl implements AdminService {
 
     private AdminDao adminDao;
-    private PostDao postDao;
-    private CommentDao commentDao;
 
     /**
      * @inheritDoc
@@ -30,49 +28,11 @@ public class AdminServiceImpl implements AdminService {
         return adminDao.getMatchCount(username, password) == 1;
     }
 
-    /**
-     * @inheritDoc
-     */
-    @Override
-    public List<Post> adminGetPostsByTitle(String title){
-        return postDao.getPostsByTitle(title);
-    }
-
-    /**
-     * @inheritDoc
-     * NOTICE: the comments along with the posts shall be deleted
-     */
-    @Override
-    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT)
-    public Boolean adminDeletePostById(Integer id){
-        Integer commentCounts = commentDao.getCommentCountsById(id);
-        if(commentCounts >= 0){
-            commentDao.removeAllCommentsById(id);
-        }
-        postDao.removePost(id);
-        return true;
-    }
-
-    /**
-     * @inheritDoc
-     */
-    @Override
-    public Boolean adminDeleteComment(Integer id, Integer floor) {
-        return commentDao.removeComment(id, floor) == 1;
-    }
 
     @Autowired
     public void setAdminDao(AdminDao adminDao){
         this.adminDao = adminDao;
     }
 
-    @Autowired
-    public void setPostDao(PostDao postDao) {
-        this.postDao = postDao;
-    }
 
-    @Autowired
-    public void setCommentDao(CommentDao commentDao) {
-        this.commentDao = commentDao;
-    }
 }

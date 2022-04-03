@@ -5,7 +5,8 @@ var postId = $("#postId").val();
 //the context path
 var contextPath = $("#contextPath").val();
 $.ajax({
-    url: contextPath + "/getComments/" + postId  + ".do",
+    url: contextPath + "/comments/" + postId,
+    type: "GET",
     dataType:"json",
     success: function(resp){
         if(resp.length !== 0){
@@ -85,7 +86,7 @@ $(".postButton").on("click", function () {
     }
     $.ajax({
         type: "POST",
-        url:contextPath + "/addComment.do",
+        url: contextPath + "/comments",
         data: {
             id : postId,
             floor : maxFloor + 1,

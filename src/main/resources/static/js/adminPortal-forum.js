@@ -5,6 +5,10 @@ var noMatchNotice = $("#noMatchHint");
 //the search button
 var searchButton = $("#search");
 //when the search button is clicked
+function forumPortalInitialize(){
+    $("#searchPost").val("");
+    $("#postsContainer").empty();
+}
 searchButton.click(function(){
     noMatchNotice.addClass("d-none");
     $("#postsContainer").empty();
@@ -14,7 +18,8 @@ searchButton.click(function(){
         return;
     }
     $.ajax({
-        url:contextPath + "/adminSearchPostsByTitle/" + titleToSearch + ".do",
+        url:contextPath + "/posts/byTitle/" + titleToSearch,
+        type: "GET",
         dataType:"json",
         success:function (resp) {
             if(resp.length === 0){
@@ -25,28 +30,6 @@ searchButton.click(function(){
         }
     })
 });
-
-//the function that performs searching
-function search(){
-    noMatchNotice.addClass("d-none");
-    $("#postsContainer").empty();
-    var titleToSearch = $("#searchPost").val();
-    if(titleToSearch === ""){
-        alert("please enter a title");
-        return;
-    }
-    $.ajax({
-        url:contextPath + "/adminSearchPostsByTitle/" + titleToSearch + ".do",
-        dataType:"json",
-        success:function (resp) {
-            if(resp.length === 0){
-                noMatchNotice.removeClass("d-none");
-            }else {
-                displayPosts(resp);
-            }
-        }
-    })
-}
 
 //the function that displays all posts
 function displayPosts(resp){
@@ -95,7 +78,8 @@ function displayPosts(resp){
             if (confirm('Are you sure to delete this post along with all the comments?')) {
                 id = $(this).attr("postId");
                 $.ajax({
-                    url:contextPath + "/adminDeletePost/" + id +".do",
+                    url:contextPath + "/posts/" + id,
+                    type: "DELETE",
                     success:function (resp) {
                         alert(resp);
                     }
@@ -113,7 +97,7 @@ function displayPosts(resp){
                 button.text("Hide Comments");
                 commentsContainer.removeClass("d-none");
                 $.ajax({
-                    url:contextPath + "/getComments/" + id +".do",
+                    url:contextPath + "/comments/" + id,
                     success:function (resp) {
                         if (resp.length === 0){
                             commentsContainer.text("No comments found for this post");
@@ -162,7 +146,8 @@ function displayPosts(resp){
                                         var floor = $(this).attr("floor");
                                         var id = $(this).attr("postId");
                                         $.ajax({
-                                            url:contextPath + "/adminDeleteComment.do",
+                                            url:contextPath + "/comments",
+                                            type: "DELETE",
                                             data:{
                                               id:id,
                                               floor:floor

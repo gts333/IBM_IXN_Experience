@@ -5,7 +5,8 @@ var contextPath = $("#contextPath").val();
 
 //when loading the forum page, load the pagination and the first page of posts
 $.ajax({
-    url: contextPath + "/getPostsCount.do",
+    url: contextPath + "/posts/count",
+    type: "GET",
     dataType: "text",
     success(resp) {
         loadPagination(resp);
@@ -19,7 +20,8 @@ function loadPagination(resp) {
     maxCount = count;
     if (count <= 1) {
         $.ajax({
-            url: contextPath + "/getAllPosts.do",
+            url: contextPath + "/posts",
+            type: "GET",
             dataType: "json",
             success(resp) {
                 loadPosts(resp);
@@ -40,7 +42,8 @@ function loadPagination(resp) {
         }
         next.removeClass("disabled");
         $.ajax({
-            url: contextPath + "/getRequiredPosts.do",
+            url: contextPath + "/posts/requiredRange",
+            type: "GET",
             data: {index: 1},
             dataType: "json",
             success(resp) {
@@ -68,7 +71,8 @@ function loadRequiredPosts(i) {
     $("#page" + i).addClass("active");
     $("#forumPostsContainer").empty();
     $.ajax({
-        url: contextPath + "/getRequiredPosts.do",
+        url: contextPath + "/posts/requiredRange",
+        type: "GET",
         data: {index: i},
         dataType: "json",
         success(resp) {
@@ -83,7 +87,7 @@ function loadPosts(resp) {
         var currentPost = resp[i];
         var h1 = $("<h1></h1>").text(currentPost.title);
         h1.addClass("display-3");
-        var a = $("<a></a>").attr("href", "getPostPage/" + currentPost.id + ".do");
+        var a = $("<a></a>").attr("href", "posts/getPage/" + currentPost.id);
         a.addClass("link-dark");
         a.addClass("text-decoration-none");
         a.append(h1);
@@ -163,7 +167,7 @@ $(".postButton").on("click", function () {
     }
     $.ajax({
         type: "POST",
-        url: contextPath + "/addPost.do",
+        url: contextPath + "/posts",
         data: {
             title: newTitleValue,
             name: newNameValue,
@@ -184,7 +188,8 @@ $("#searchButton").on("click", function () {
         return;
     }
     $.ajax({
-        url: contextPath + "/getPostsByTitle/" + title + "/.do",
+        url: contextPath + "/posts/byTitle/" + title,
+        type: "GET",
         dataType: "json",
         success: function(resp) {
             var forumPostsContainer = $("#forumPostsContainer");

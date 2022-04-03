@@ -7,6 +7,9 @@ import com.uclibm.ixn.domain.Post;
 import com.uclibm.ixn.service.ForumService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -46,6 +49,7 @@ public class ForumServiceImpl implements ForumService {
     public List<Post> getPostsByTitle(String title) {
         return postDao.getPostsByTitle(title);
     }
+
 
     /**
      * @inheritDoc
@@ -94,6 +98,31 @@ public class ForumServiceImpl implements ForumService {
      */
     @Override
     public Boolean deleteCommentById(Integer id, Integer floor) {
+        return commentDao.removeComment(id, floor) == 1;
+    }
+
+
+
+    /**
+     * @inheritDoc
+     * NOTICE: the comments along with the posts shall be deleted
+     */
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT)
+    public Boolean adminDeletePostById(Integer id){
+        Integer commentCounts = commentDao.getCommentCountsById(id);
+        if(commentCounts >= 0){
+            commentDao.removeAllCommentsById(id);
+        }
+        postDao.removePost(id);
+        return true;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    @Override
+    public Boolean adminDeleteComment(Integer id, Integer floor) {
         return commentDao.removeComment(id, floor) == 1;
     }
 
