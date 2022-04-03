@@ -11,6 +11,7 @@ public class GeneralController {
         return "admin";
     }
 
+
     @RequestMapping(value = "/contact.html")
     public String contact() {
         return "contact";
@@ -59,11 +60,6 @@ public class GeneralController {
     @RequestMapping(value = "/student.html")
     public String student() {
         return "student";
-    }
-
-    @RequestMapping(value = "/terms.html")
-    public String terms() {
-        return "terms";
     }
 
     @RequestMapping(value = "/university.html")

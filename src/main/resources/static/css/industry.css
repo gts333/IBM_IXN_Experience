@@ -27,92 +27,35 @@
     color: white;
     font-family: Garamond, serif;
 }
+.img-wrapper {
+    display: inline-block;
+    overflow: hidden;
+}
 
+#ibm:hover {
+    transform:scale(1.2);
+    -ms-transform:scale(1.2); /* IE 9 */
+    -moz-transform:scale(1.2); /* Firefox */
+    -webkit-transform:scale(1.2); /* Safari and Chrome */
+    -o-transform:scale(1.2); /* Opera */
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+}
 #caption1 {
     position: absolute;
-    top: 50%;
+    top: 90%;
     left: 50%;
     width: 100%;
-    height: 100%;
+    height: 30%;
     color: white;
     font-size: calc(8px + 2.5vw);
-    background-color: rgba(0,0,0, 0.5);
+    background-color: rgba(0,0,0, 0.3);
 }
-#registeredStudent{
-    font-size: calc(8px + 1.5vw);
-    color: floralwhite;
-    text-decoration: none;
+#caption1:hover{
+    background-color: rgba(0,0,0, 0.4);
 }
-#registeredStudent:hover{
-    text-decoration: underline;
-}
-#newStudent{
-    font-size: calc(8px + 1.5vw);
-    color: floralwhite;
-    text-decoration: none;
-}
-#newStudent:hover{
-    text-decoration: underline;
-}
-#registeredStudent > p{
-    animation-delay: 1s;
-}
-#newStudent > p{
-    animation-delay: 2s;
-}
-
-#caption2 {
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    width: 40%;
-    height: 100%;
-    color: white;
-    font-size: calc(8px + 2.5vw);
-    background-color: rgba(0,0,0, 0.5);
-}
-#caption2 > p{
-    font-size: calc(3px + 1.5vw);
-}
-
-#caption3 {
-    position: absolute;
-    top: 50%;
-    left: 80%;
-    width: 40%;
-    height: 100%;
-    color: white;
-    font-size: calc(8px + 2.5vw);
-    background-color: rgba(0,0,0, 0.5);
-}
-#caption3 > p{
-    font-size: calc(3px + 1.5vw);
-}
-
-#caption4 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 40%;
-    height: 100%;
-    color: white;
-    font-size: calc(8px + 2.5vw);
-    background-color: rgba(0,0,0, 0.5);
-}
-#caption4 > p{
-    font-size: calc(3px + 1.5vw);
-}
-#caption5 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 40%;
-    height: 100%;
-    color: white;
-    font-size: calc(8px + 2.5vw);
-    background-color: rgba(0,0,0, 0.5);
-}
-
 
 #optionText1{
     position: absolute;
@@ -156,5 +99,3 @@
 #optionText3:hover{
     background-color: rgba(0,0,0, 0.1);
 }
-
-

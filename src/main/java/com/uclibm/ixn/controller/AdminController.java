@@ -4,11 +4,14 @@ import com.uclibm.ixn.domain.Post;
 import com.uclibm.ixn.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -17,16 +20,22 @@ public class AdminController {
     private AdminService adminService;
 
     @RequestMapping("/adminLogin.do")
-    public ModelAndView adminLogin(String username, String password){
+    public String adminLogin(HttpServletRequest request, Model model){
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
         Boolean matches = adminService.adminLogin(username, password);
         if(matches){
-            ModelAndView modelAndView = new ModelAndView("adminPortal");
-            modelAndView.addObject("adminName", username);
-            return modelAndView;
+//            ModelAndView modelAndView = new ModelAndView("adminPortal");
+//            modelAndView.addObject("adminName", username);
+//            return modelAndView;
+            model.addAttribute("adminName", username);
+            return "adminPortal";
         }else{
-            ModelAndView modelAndView = new ModelAndView("admin");
-            modelAndView.addObject("invalid", "invalid");
-            return modelAndView;
+//            ModelAndView modelAndView = new ModelAndView("admin");
+//            modelAndView.addObject("invalid", "invalid");
+//            return modelAndView;
+            model.addAttribute("invalid", "invalid");
+            return "admin";
         }
     }
 

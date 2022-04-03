@@ -28,9 +28,8 @@ public interface CommentDao {
     /**
      * delete all the comments of a blog
      * @param id the id of the post
-     * @return the number of rows affected in the database
      */
-    Integer removeAllCommentsById(Integer id);
+    void removeAllCommentsById(Integer id);
 
     /**
      *

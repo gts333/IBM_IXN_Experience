@@ -7,6 +7,7 @@ spring:
     #TODO: close when developing, open when online
     cache: false
   profiles:
+    #TODO remove the 1 1 test data in admins
     include: datasource
 
 mybatis-plus:
