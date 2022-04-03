@@ -56,7 +56,8 @@
                                 class="nav_name">Messages</span> </a>
                         <a href="javascript:projectsClicked()" class="nav_link"> <i class='bx bx-code-alt nav_icon'></i>
                             <span class="nav_name">Bookmark</span></a>
-                        <a href="javascript:infoClicked()" class="nav_link" id="infoClicked"> <i class='bx bx-info-square nav_icon'></i>
+                        <a href="javascript:infoClicked()" class="nav_link" id="infoClicked"> <i
+                                class='bx bx-info-square nav_icon'></i>
                             <span class="nav_name">Files</span></a>
                         <!--                        <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a>-->
                     </div>
@@ -68,10 +69,11 @@
         <!--Container Main start-->
         <div>
             <div id="adminPortalForGeneral">
-
                 <h1 class="display-1" th:text="|Welcome, ${adminName}|"></h1>
                 <h1 class="display-1">Select an option from the side bar</h1>
             </div>
+
+
             <div id="adminPortalForForum" class="d-none">
                 <br><br>
                 <h4 class="fw-bold">Forum management</h4>
@@ -103,14 +105,24 @@
                 <div class="container" id="postsContainer">
                 </div>
             </div>
+
+
             <div id="adminPortalForNews" class="d-none">
                 <br><br>
-                admin portal for news
+                <form method="post" action="/upload" enctype="multipart/form-data">
+                    选择要上传的文件：<input type="file" name="file"><br>
+                    <hr>
+                    <input type="submit" value="提交">
+                </form>
             </div>
+
+
             <div id="adminPortalForProjects" class="d-none">
                 <br><br>
                 admin portal for projects
             </div>
+
+
             <div id="adminPortalForInfo" class="d-none">
                 <br><br>
                 <h4 class="fw-bold">Info entities management</h4>
@@ -124,11 +136,14 @@
                         <textarea class="form-control" id="newContent" rows="10"
                                   placeholder="Enter the content of entity"></textarea>
                     </div>
-                    <button type="button" class="btn btn-success btn-lg col-12 postButton  rounded-0" id="confirmAddInfo">
+                    <button type="button" class="btn btn-success btn-lg col-12 postButton  rounded-0"
+                            id="confirmAddInfo">
                         confirm
                     </button>
                 </div>
-                <button type="button" class="btn btn-dark btn-lg col-12 toggleButton rounded-0" id="addInfo">add new entity</button>
+                <button type="button" class="btn btn-dark btn-lg col-12 toggleButton rounded-0" id="addInfo">add new
+                    entity
+                </button>
                 <hr>
                 <div class="container-fluid row">
                     <br>
@@ -138,9 +153,7 @@
                     <hr>
                 </div>
                 <div id="adminPortalForInfoContainer">
-
                 </div>
-
             </div>
         </div>
         <button type="button" class="btn btn-secondary btn-floating btn-lg" id="btn-back-to-top">

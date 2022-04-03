@@ -1,9 +1,5 @@
 package com.uclibm.ixn.service;
 
-import com.uclibm.ixn.domain.Post;
-
-
-import java.util.List;
 
 public interface AdminService {
     /**

@@ -1,9 +1,6 @@
 package com.uclibm.ixn.service.impl;
 
 import com.uclibm.ixn.dao.AdminDao;
-import com.uclibm.ixn.dao.CommentDao;
-import com.uclibm.ixn.dao.PostDao;
-import com.uclibm.ixn.domain.Post;
 import com.uclibm.ixn.service.AdminService;
 
 
