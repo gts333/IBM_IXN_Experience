@@ -30,6 +30,7 @@ function newsClicked(){
     adminPortalForProjects.addClass("d-none");
     adminPortalForInfo.addClass("d-none");
     window.scrollTo(0,0);
+    newsPortalInitialize();
 }
 function projectsClicked(){
     adminPortalForGeneral.addClass("d-none");

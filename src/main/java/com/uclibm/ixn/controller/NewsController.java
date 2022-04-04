@@ -1,50 +1,45 @@
 package com.uclibm.ixn.controller;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 
 
-import lombok.extern.slf4j.Slf4j;
-
+import com.uclibm.ixn.domain.News;
+import com.uclibm.ixn.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-
-import org.springframework.stereotype.Controller;
-
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.ServletContext;
+import java.util.List;
 
-@Controller
-@Slf4j
+@RestController
+@RequestMapping("/news")
 public class NewsController {
-    private ServletContext servletContext;
+    private NewsService NewsService;
+
+    @GetMapping
+    public List<News> getAllNews(){
+        return NewsService.getAllNews();
+    }
+
+    @PostMapping
+    public String addNews(String topic, String content, String time, String image){
+        News News = new News();
+        News.setTitle(topic);
+        News.setContent(content);
+        News.setTime(time);
+        News.setImage(image);
+        return NewsService.addNews(News) == 1?"added successfully, there might be a delay in updating the website":"an error occurred";
+    }
+
+    @DeleteMapping
+    public String deleteEntityByTitle(String title){
+        return NewsService.removeNewsByTitle(title) == 1?"deleted successfully, there might be a delay in updating the website":"an error occurred";
+    }
 
     @Autowired
-    public void setServletContext(ServletContext servletContext) {
-        this.servletContext = servletContext;
+    public void setNewsService(NewsService NewsService) {
+        this.NewsService = NewsService;
     }
 
 
-
-    @GetMapping("/")
-    public String uploadPage() {
-        return "upload";
-    }
-
-    @PostMapping("/upload")
-    @ResponseBody
-    public String create(@RequestPart MultipartFile file) throws IOException {
-        String fileName = file.getOriginalFilename();
-        System.out.println(System.getProperty("user.dir"));
-        String filePath = servletContext.getContextPath();
-
-        File dest = new File(filePath + fileName);
-        Files.copy(file.getInputStream(), dest.toPath());
-        return "Upload file success : " + dest.getAbsolutePath();
-    }
 
 
 

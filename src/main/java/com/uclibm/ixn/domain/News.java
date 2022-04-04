@@ -11,6 +11,6 @@ import java.sql.Timestamp;
 public class News {
     private String title;
     private String content;
-    private Timestamp time;
+    private String time;
     private String image;
 }

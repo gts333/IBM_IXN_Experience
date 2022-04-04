@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uclibm.ixn.dao.NewsDao">
+    <resultMap id="NewsMap" type="News">
+        <id property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="time" column="time"/>
+        <result property="image" column="image"/>
+    </resultMap>
+
+    <insert id="addNews" parameterType="News">
+        insert into news values( #{title}, #{content}, #{time}, #{image})
+    </insert>
+    <delete id="deleteNewsByTitle">
+        delete from news where title = #{title}
+    </delete>
+    <select id="getAllNews" resultMap="NewsMap">
+        select * from news order by time desc
+    </select>
+
+</mapper>

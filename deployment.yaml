@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: myname
-          image: uk.icr.io/testeee/myrepo@sha256:ef06b19c7aac91a80cd71232cbf69ad08c36b2b0667274a00da7c4f85606291f
+          image: uk.icr.io/testeee/myrepo@sha256:058b24c4dc3673e250ce9faef16f8e948c753cb204ed4b7cdf74c57b873ea289
 ---
 apiVersion: v1
 kind: Service

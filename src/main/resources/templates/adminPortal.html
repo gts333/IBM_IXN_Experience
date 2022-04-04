@@ -109,11 +109,45 @@
 
             <div id="adminPortalForNews" class="d-none">
                 <br><br>
-                <form method="post" action="/upload" enctype="multipart/form-data">
-                    选择要上传的文件：<input type="file" name="file"><br>
+                <h4 class="fw-bold">News management</h4>
+                <div id="newNewsContainer">
+                    <div class="form-group col-6">
+                        <label for="newNewsTopic"><strong>News Topic</strong></label>
+                        <input type="text" class="form-control" id="newNewsTopic" placeholder="Enter the topic">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="newNewsDate"><strong>News Date, Please use format YYYY-MM-DD (E.g. 2022-04-01)</strong></label>
+                        <input type="text" class="form-control" id="newNewsDate" placeholder="Enter the date">
+                    </div>
+                    <div class="form-group col-12">
+                        <label for="newNewsContent"><strong>Content</strong></label>
+                        <textarea class="form-control" id="newNewsContent" rows="10"
+                                  placeholder="Enter the content"></textarea>
+                    </div>
+                    <form action="https://api.imgbb.com/1/upload?key=a5b396af57e63d59b0a0c928a2f778de" method="post"
+                          accept-charset="utf-8" class="form col-12" id="frm-reg" name="frm-reg">
+                        <label for="formFile" class="form-label"><strong>Please upload the image for the news, accepted formats:
+                            jpg, bmp, png, jpeg, webp</strong></label>
+                        <input class="form-control col-8" type="file" id="formFile" name="image">
+                        <input class="btn btn-success btn-lg col-12 postButton  rounded-0" type="button" id="sub" name="submit" value="confirm">
+                    </form>
+                </div>
+                <button type="button" class="btn btn-dark btn-lg col-12 toggleButton rounded-0" id="addNews">add new
+                    news
+                </button>
+                <hr>
+                <div class="container-fluid row">
+                    <br>
+                    <h4 class="fw-bold col-5">Title</h4>
+                    <h4 class="fw-bold col-5">Content</h4>
+                    <br>
                     <hr>
-                    <input type="submit" value="提交">
-                </form>
+                </div>
+                <div id="allNewsContainer">
+
+
+                </div>
+
             </div>
 
 
@@ -177,12 +211,14 @@
         crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
 <script src="/js/general.js"></script>
 <script src="/js/adminPortal-general.js"></script>
 <script src="/js/adminPortal-forum.js"></script>
 <script src="/js/adminPortal-news.js"></script>
 <script src="/js/adminPortal-projects.js"></script>
 <script src="/js/adminPortal-info.js"></script>
+
 <script>
     document.addEventListener("DOMContentLoaded", function (event) {
 
