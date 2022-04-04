@@ -11,6 +11,7 @@
     <title>IXN student registration</title>
 </head>
 <body>
+<input id="contextPath" type="hidden" th:value="${#servletContext.getContextPath()}"/>
 <div class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
@@ -21,7 +22,7 @@
                 <a class="navbar-brand" href="/homepage.html">IXN Online Experience</a>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link" href="/forum.html">Forum</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/news.html">News</a></li>
                     <li class="nav-item"><a class="nav-link" href="/projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="/info.html">Info</a></li>
                 </ul>
@@ -34,6 +35,24 @@
     </nav>
     <main class="flex-fill">
         <br><br>
+        <div class="container-fluid row">
+
+            <div class="col-8">
+                <br>
+                <h1>Latest news</h1>
+                <hr>
+                <div id="newsDisplayingContainer">
+
+                </div>
+
+            </div>
+            <div class="col-4">
+                <a class="twitter-timeline" href="https://twitter.com/IBM?ref_src=twsrc%5Etfw">Tweets by IBM</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+
+
+
         <button type="button" class="btn btn-secondary btn-floating btn-lg" id="btn-back-to-top">
             <i class="bi bi-chevron-up"></i>
         </button>
