@@ -8,7 +8,7 @@ function newsInitialize() {
         type: "GET",
         success: function (resp) {
             for(var i = 0; i < resp.length; i++){
-                var currentContainer = $("<div></div>")
+                var currentContainer = $("<div></div>");
                 var index = i + 1;
                 var currentNews = resp[i];
                 var title = currentNews.title;
@@ -25,6 +25,7 @@ function newsInitialize() {
                 currentContainer.append(newsImage);
                 currentContainer.append(newsContent);
                 currentContainer.append(hr);
+
                 newsContainer.append(currentContainer);
             }
         }
