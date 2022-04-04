@@ -116,7 +116,8 @@
                         <input type="text" class="form-control" id="newNewsTopic" placeholder="Enter the topic">
                     </div>
                     <div class="form-group col-6">
-                        <label for="newNewsDate"><strong>News Date, Please use format YYYY-MM-DD (E.g. 2022-04-01)</strong></label>
+                        <label for="newNewsDate"><strong>News Date, Please use format YYYY-MM-DD (E.g.
+                            2022-04-01)</strong></label>
                         <input type="text" class="form-control" id="newNewsDate" placeholder="Enter the date">
                     </div>
                     <div class="form-group col-12">
@@ -126,10 +127,12 @@
                     </div>
                     <form action="https://api.imgbb.com/1/upload?key=a5b396af57e63d59b0a0c928a2f778de" method="post"
                           accept-charset="utf-8" class="form col-12" id="frm-reg" name="frm-reg">
-                        <label for="formFile" class="form-label"><strong>Please upload the image for the news, accepted formats:
+                        <label for="formFile" class="form-label"><strong>Please upload the image for the news, accepted
+                            formats:
                             jpg, bmp, png, jpeg, webp</strong></label>
                         <input class="form-control col-8" type="file" id="formFile" name="image">
-                        <input class="btn btn-success btn-lg col-12 postButton  rounded-0" type="button" id="sub" name="submit" value="confirm">
+                        <input class="btn btn-success btn-lg col-12 postButton  rounded-0" type="button" id="sub"
+                               name="submit" value="confirm">
                     </form>
                 </div>
                 <button type="button" class="btn btn-dark btn-lg col-12 toggleButton rounded-0" id="addNews">add new
@@ -144,16 +147,50 @@
                     <hr>
                 </div>
                 <div id="allNewsContainer">
-
-
                 </div>
-
             </div>
 
 
             <div id="adminPortalForProjects" class="d-none">
                 <br><br>
-                admin portal for projects
+                <h4 class="fw-bold">Projects management</h4>
+                <div id="newProjectContainer">
+                    <div class="form-group col-6">
+                        <label for="newProjectTopic"><strong>Project Title</strong></label>
+                        <input type="text" class="form-control" id="newProjectTopic" placeholder="Enter the title">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="newProjectRepo"><strong>Project Repository link</strong></label>
+                        <input type="text" class="form-control" id="newProjectRepo" placeholder="Enter the link">
+                    </div>
+                    <div class="form-group col-12">
+                        <label for="newProjectContent"><strong>Description</strong></label>
+                        <textarea class="form-control" id="newProjectContent" rows="10"
+                                  placeholder="Enter the description"></textarea>
+                    </div>
+                    <form action="https://api.imgbb.com/1/upload?key=a5b396af57e63d59b0a0c928a2f778de" method="post"
+                          accept-charset="utf-8" class="form col-12" id="frm-reg-1" name="frm-reg">
+                        <label for="formFile" class="form-label"><strong>Please upload the image for the project, accepted
+                            formats:
+                            jpg, bmp, png, jpeg, webp</strong></label>
+                        <input class="form-control col-8" type="file" id="formFile-1" name="image">
+                        <input class="btn btn-success btn-lg col-12 postButton  rounded-0" type="button" id="sub-1"
+                               name="submit" value="confirm">
+                    </form>
+                </div>
+                <button type="button" class="btn btn-dark btn-lg col-12 toggleButton rounded-0" id="addProject">add new
+                    project
+                </button>
+                <hr>
+                <div class="container-fluid row">
+                    <br>
+                    <h4 class="fw-bold col-5">Title</h4>
+                    <h4 class="fw-bold col-5">Description</h4>
+                    <br>
+                    <hr>
+                </div>
+                <div id="allProjectsContainer">
+                </div>
             </div>
 
 
@@ -195,16 +232,6 @@
         </button>
     </main>
 </div>
-
-<!--    <footer class="p-2">-->
-<!--        <p class="text-sm-center" id="footerText">Site design by Tangsheng Geng at UCL for IXN </p>-->
-<!--        <div class="text-sm-center" id="footerLinks">-->
-<!--            <a href="/admin.html" class="link-secondary">Admin Login</a>-->
-<!--            <a href="/privacy.html" class="link-secondary">Privacy Policy</a>-->
-<!--            <a href="/contact.html" class="link-secondary">Contact us</a>-->
-<!--        </div>-->
-<!--    </footer>-->
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"

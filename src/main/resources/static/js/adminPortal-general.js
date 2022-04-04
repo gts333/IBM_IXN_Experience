@@ -39,6 +39,7 @@ function projectsClicked(){
     adminPortalForProjects.removeClass("d-none");
     adminPortalForInfo.addClass("d-none");
     window.scrollTo(0,0);
+    projectsPortalInitialize();
 }
 function infoClicked(){
     adminPortalForGeneral.addClass("d-none");

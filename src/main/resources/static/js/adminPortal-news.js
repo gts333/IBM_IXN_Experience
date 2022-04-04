@@ -86,7 +86,7 @@ addNewsButton.click(function () {
         return;
     }
     if(newNewsDate.val() === ""){
-        alert("please enter a title");
+        alert("please enter a date");
         return;
     }
     if(!newNewsDate.val().match(/^\d{4}-\d{2}-\d{2}$/)){
@@ -107,7 +107,6 @@ addNewsButton.click(function () {
     }
     $("#frm-reg").ajaxSubmit(function (data) {
         imageURL = data.data.url + "";
-        console.log(imageURL);
         $.ajax({
             url:  contextPath + "/news",
             type: "POST",
