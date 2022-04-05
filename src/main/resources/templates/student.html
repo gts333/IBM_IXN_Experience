@@ -26,9 +26,9 @@
                     <li class="nav-item"><a class="nav-link" href="/projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="/info.html">Info</a></li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-dark" type="submit"><i class="bi bi-search"></i></button>
+                <form action="/search" class="d-flex col-3" method="get">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchBarInput" name="content">
+                    <button class="btn btn-outline-dark" type="submit" id="SearchBarButton"><i class="bi bi-search"></i></button>
                 </form>
             </div>
         </div>
@@ -102,17 +102,17 @@
                  alt="texture">
             <a href="/contact.html">
                 <div class="caption responsiveText role" id="optionText1">
-                    <i class="bi bi-envelope"></i><br>Join IXN by<br>contacting us now
+                    <br><i class="bi bi-envelope"></i><br>Join IXN by<br>contacting us now
                 </div>
             </a>
             <a href="/info.html">
                 <div class="caption responsiveText role" id="optionText2">
-                    <i class="bi bi-info-square"></i><br>View more information<br>in our guide to IXN
+                    <br><i class="bi bi-info-square"></i><br>View more information<br>in our guide to IXN
                 </div>
             </a>
             <a href="/forum.html">
                 <div class="caption responsiveText role" id="optionText3">
-                    <i class="bi bi-question-square"></i><br>Ask a question<br>in the forum
+                    <br><i class="bi bi-question-square"></i><br>Ask a question<br>in the forum
                 </div>
             </a>
         </div>

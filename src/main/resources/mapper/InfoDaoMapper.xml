@@ -17,5 +17,9 @@
     <select id="getAllInfos" resultMap="InfoMap">
         select * from infos
     </select>
+    <select id="getInfosByTopic" resultMap="InfoMap">
+        <bind name="pattern" value="'%' + topic + '%'"/>
+        select * from infos where topic like #{pattern}
+    </select>
 
 </mapper>

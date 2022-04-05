@@ -10,4 +10,6 @@ public interface ProjectService {
     Integer removeProjectByTitle(String title);
 
     Integer addProject(Project project);
+
+    List<Project> getProjectsByTitle(String topic);
 }

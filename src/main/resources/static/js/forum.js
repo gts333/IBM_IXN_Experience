@@ -165,6 +165,24 @@ $(".postButton").on("click", function () {
         alert("content too long");
         return;
     }
+    //log the userInput, this time post topic
+    $.ajax({
+        url: contextPath + "/userInputs",
+        type: "POST",
+        data: {
+            content: newTitleValue
+        },
+        success: function (resp) {}
+    });
+    //log the userInput, this time post content
+    $.ajax({
+        url: contextPath + "/userInputs",
+        type: "POST",
+        data: {
+            content: newContentValue
+        },
+        success: function (resp) {}
+    });
     $.ajax({
         type: "POST",
         url: contextPath + "/posts",
@@ -187,6 +205,15 @@ $("#searchButton").on("click", function () {
         alert("please enter the topic");
         return;
     }
+    //log the userInput
+    $.ajax({
+        url: contextPath + "/userInputs",
+        type: "POST",
+        data: {
+            content: title
+        },
+        success: function (resp) {}
+    });
     $.ajax({
         url: contextPath + "/posts/byTitle/" + title,
         type: "GET",

@@ -12,4 +12,6 @@ public interface InfoService {
 
     Integer addInfo(Info info);
 
+    List<Info> searchInfosByTopic(String topic);
+
 }

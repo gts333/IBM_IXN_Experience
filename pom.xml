@@ -59,6 +59,11 @@
             <artifactId>jcc</artifactId>
             <version>11.5.7.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.ibm.watson</groupId>
+            <artifactId>ibm-watson</artifactId>
+            <version>10.0.0</version>
+        </dependency>
 
 
     </dependencies>

@@ -33,6 +33,7 @@
     -o-transition: .4s ease-in-out;
     transition: .4s ease-in-out;
 }
+
 #caption1 {
     position: absolute;
     top: 90%;
@@ -89,3 +90,11 @@
 #optionText3:hover{
     background-color: rgba(0,0,0, 0.1);
 }
+
+
+
+
+
+
+
+

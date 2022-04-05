@@ -5,6 +5,7 @@ target/
 !**/src/test/**/target/
 ### datasource files ###
 src/main/resources/application-datasource.yml
+src/main/resources/application-watson.yml
 
 
 ### STS ###

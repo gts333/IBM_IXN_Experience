@@ -1,5 +1,6 @@
 package com.uclibm.ixn;
 
+import com.uclibm.ixn.controller.SearchController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

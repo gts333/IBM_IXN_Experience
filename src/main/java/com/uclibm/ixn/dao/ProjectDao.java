@@ -29,5 +29,7 @@ public interface ProjectDao {
      */
     Integer deleteProjectByTitle(@Param("title")String title);
 
+    List<Project> getProjectsByTopic(@Param("topic")String topic);
+
 
 }

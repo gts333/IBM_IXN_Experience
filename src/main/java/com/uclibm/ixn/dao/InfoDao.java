@@ -28,5 +28,7 @@ public interface InfoDao {
      */
     Integer deleteInfoByTopic(@Param("topic")String topic);
 
+    List<Info> getInfosByTopic(@Param("topic")String topic);
+
 
 }

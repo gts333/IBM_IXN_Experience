@@ -12,4 +12,6 @@ public interface NewsService {
     Integer removeNewsByTitle(String title);
 
     Integer addNews(News news);
+
+    List<News> getNewsByTopic(String topic);
 }

@@ -27,6 +27,11 @@ public class NewsServiceImpl implements NewsService {
         return newsDao.addNews(news);
     }
 
+    @Override
+    public List<News> getNewsByTopic(String topic) {
+        return newsDao.getNewsByTopic(topic);
+    }
+
     @Autowired
     public void setNewsDao(NewsDao newsDao) {
         this.newsDao = newsDao;

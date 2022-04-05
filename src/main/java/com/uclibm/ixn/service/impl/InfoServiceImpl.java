@@ -28,6 +28,11 @@ public class InfoServiceImpl implements InfoService {
         return infoDao.addInfo(info);
     }
 
+    @Override
+    public List<Info> searchInfosByTopic(String topic) {
+        return infoDao.getInfosByTopic(topic);
+    }
+
     @Autowired
     public void setInfoDao(InfoDao infoDao) {
         this.infoDao = infoDao;

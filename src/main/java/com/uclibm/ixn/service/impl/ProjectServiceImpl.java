@@ -26,6 +26,11 @@ public class ProjectServiceImpl implements ProjectService {
         return projectDao.addProject(project);
     }
 
+    @Override
+    public List<Project> getProjectsByTitle(String topic) {
+        return projectDao.getProjectsByTopic(topic);
+    }
+
     @Autowired
     public void setProjectDao(ProjectDao projectDao) {
         this.projectDao = projectDao;

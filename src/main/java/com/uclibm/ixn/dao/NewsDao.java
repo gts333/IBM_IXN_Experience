@@ -28,5 +28,7 @@ public interface NewsDao {
      */
     Integer deleteNewsByTitle(@Param("title")String title);
 
+    List<News> getNewsByTopic(@Param("topic")String topic);
+
 
 }

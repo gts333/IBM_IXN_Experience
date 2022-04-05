@@ -19,7 +19,7 @@
         delete from posts where id = #{id}
     </delete>
     <select id="getAllPosts" resultMap="PostMap">
-        select * from posts
+        select * from posts order by post_time desc
     </select>
     <select id="getPostCounts" resultType="java.lang.Integer">
         select count(*) from posts

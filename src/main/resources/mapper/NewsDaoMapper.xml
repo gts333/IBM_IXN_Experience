@@ -19,5 +19,9 @@
     <select id="getAllNews" resultMap="NewsMap">
         select * from news order by time desc
     </select>
+    <select id="getNewsByTopic" resultMap="NewsMap">
+        <bind name="pattern" value="'%' + topic + '%'"/>
+        select * from news where title like #{pattern} order by time desc
+    </select>
 
 </mapper>
