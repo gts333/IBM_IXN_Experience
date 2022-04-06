@@ -71,6 +71,14 @@
             <div id="adminPortalForGeneral">
                 <h1 class="display-1" th:text="|Welcome, ${adminName}|"></h1>
                 <h1 class="display-1">Select an option from the side bar</h1>
+                <hr>
+                <button type="button" class="btn btn-dark btn-lg col-12 toggleButton rounded-0" id="generateReportButton">
+                    generate report on user input
+                </button>
+                <hr>
+                <div id="reportContainer">
+
+                </div>
             </div>
 
 
@@ -245,6 +253,7 @@
 <script src="/js/adminPortal-news.js"></script>
 <script src="/js/adminPortal-projects.js"></script>
 <script src="/js/adminPortal-info.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function (event) {

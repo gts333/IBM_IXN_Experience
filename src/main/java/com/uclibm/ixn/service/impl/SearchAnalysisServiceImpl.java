@@ -47,7 +47,6 @@ public class SearchAnalysisServiceImpl implements SearchAnalysisService {
             //if the IBM Watson considers the user input to be too small, or it fails to work,
             //we split the words by ourselves
         }catch (Exception ignored){
-        }finally {
             String[] splited = content.split("\\s+");
             words.add(content);
             words.addAll(Arrays.asList(splited));
