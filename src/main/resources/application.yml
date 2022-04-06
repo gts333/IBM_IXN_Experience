@@ -3,7 +3,7 @@ server:
 spring:
   thymeleaf:
     #TODO: close when developing, open when online
-    cache: false
+    cache: true
   profiles:
     # the datasource and watson are not pushed to github as they contain credentials
     include: datasource,watson
