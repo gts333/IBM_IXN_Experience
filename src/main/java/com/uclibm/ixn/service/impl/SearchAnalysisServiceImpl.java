@@ -85,19 +85,22 @@ public class SearchAnalysisServiceImpl implements SearchAnalysisService {
             List<Info> infos = infoService.searchInfosByTopic(word);
             if (infos.size() != 0){
                 for(Info info:infos){
-                    result.put("Info: "+ info.getTopic(), "/info.html");
+                    String temp = info.getTopic().replace(".", "");
+                    result.put("Info: "+ info.getTopic(), "/info.html#" + temp.replaceAll("\\s+",""));
                 }
             }
             List<News> news = newsService.getNewsByTopic(word);
             if (news.size() != 0){
                 for(News curNews: news){
-                    result.put("News: "+ curNews.getTitle(), "/news.html");
+                    String temp = curNews.getTitle().replace(".", "");
+                    result.put("News: "+ curNews.getTitle(), "/news.html#" + temp.replaceAll("\\s+",""));
                 }
             }
             List<Project> projects = projectService.getProjectsByTitle(word);
             if (projects.size() != 0){
                 for(Project project:projects){
-                    result.put("Project: "+ project.getTitle(), "/projects.html");
+                    String temp = project.getTitle().replace(".", "");
+                    result.put("Project: "+ project.getTitle(), "/projects.html#" + temp.replaceAll("\\s+",""));
                 }
             }
         }

@@ -31,8 +31,10 @@ function infoInitialize() {
                 var content = $("<div></div>").addClass("responsiveTextContent d-none");
                 content.attr("id", "content"+ index);
                 content.text(currentInfo.content);
-                entities.append(button);
-                entities.append(content);
+                var curContainer = $("<div></div>").attr("id", currentInfo.topic.replace(/\s/g, "").split('.').join(""));
+                curContainer.append(button);
+                curContainer.append(content);
+                entities.append(curContainer);
                 var ii = $("<i></i>").addClass("bi bi-chevron-right");
                 ii.attr("id", "icon" + index);
                 var text = $("<p></p>").text("");
@@ -50,7 +52,6 @@ function infoInitialize() {
 
 //assign trigger events to all entities
 $(".entity").on("click", function () {
-    alert("hi");
     var id = $(this).attr("id");
     var icon = $("#icon" + id);
     var content = $("#content" + id);
@@ -64,7 +65,6 @@ $(".entity").on("click", function () {
         icon.addClass("bi-chevron-right");
     }
 });
-
 
 
 

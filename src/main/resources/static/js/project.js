@@ -6,9 +6,10 @@ function projectsInitialize() {
     $.ajax({
         url: contextPath + "/projects",
         type: "GET",
+        async: false,
         success: function (resp) {
             for(var i = 0; i < resp.length; i++){
-                var currentContainer = $("<div></div>")
+                var currentContainer = $("<div></div>");
                 var index = i + 1;
                 var currentNews = resp[i];
                 var title = currentNews.title;
@@ -25,10 +26,10 @@ function projectsInitialize() {
                 currentContainer.append(newsDate);
                 currentContainer.addClass("rounded border border-1 m-1 p-1");
                 var externalContainer = $("<div></div>").addClass("col-4");
+                externalContainer.attr("id", title.replace(/\s/g, "").split('.').join(""));
                 externalContainer.append(currentContainer);
                 projectsContainer.append(externalContainer);
             }
         }
-
     })
 }

@@ -6,6 +6,7 @@ function newsInitialize() {
     $.ajax({
         url: contextPath + "/news",
         type: "GET",
+        async: false,
         success: function (resp) {
             for(var i = 0; i < resp.length; i++){
                 var currentContainer = $("<div></div>");
@@ -25,10 +26,9 @@ function newsInitialize() {
                 currentContainer.append(newsImage);
                 currentContainer.append(newsContent);
                 currentContainer.append(hr);
-
+                currentContainer.attr("id", title.replace(/\s/g, "").split('.').join(""));
                 newsContainer.append(currentContainer);
             }
         }
-
-    })
+    });
 }
