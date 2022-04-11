@@ -19,7 +19,7 @@ function newsInitialize() {
                 var newsTitle = $("<h1></h1>").text(title).addClass("fw-bold");
                 var newsDate = $("<h3></h3>").text(date);
                 var newsImage = $("<img class=\"img-fluid\" alt=newsImage" + index + " src=" + imageURL  +">");
-                var newsContent = $("<h5></h5>").text(content);
+                var newsContent = $("<h5></h5>").text(content).addClass("myDisplayText");
                 var hr = $("<hr>");
                 currentContainer.append(newsTitle);
                 currentContainer.append(newsDate);

@@ -21,3 +21,9 @@ footer {
     background-color: hsla(90, 2%, 75%, 0.5);
 }
 
+
+
+/*the below is the css for some text*/
+.myDisplayText{
+    font-family: 'Open Sans', sans-serif;
+}

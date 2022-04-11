@@ -19,7 +19,7 @@ function projectsInitialize() {
                 var newsTitle = $("<h3></h3>").text(title).addClass("fw-bold d-flex justify-content-center");
                 var newsDate = $("<a target=\"_blank\" href=" + repo  + ">Youtube Link</a>").addClass("d-flex justify-content-center");
                 var newsImage = $("<img class=\"img-fluid\" alt=newsImage" + index + " src=" + imageURL  +">");
-                var newsContent = $("<h5></h5>").text(content);
+                var newsContent = $("<h5></h5>").text(content).addClass("myDisplayText");
                 currentContainer.append(newsTitle);
                 currentContainer.append(newsImage);
                 currentContainer.append(newsContent);
