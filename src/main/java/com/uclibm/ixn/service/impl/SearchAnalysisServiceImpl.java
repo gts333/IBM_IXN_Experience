@@ -24,7 +24,7 @@ public class SearchAnalysisServiceImpl implements SearchAnalysisService {
     private InfoService infoService;
 
     @Override
-    //Use the IBM Watson AI to analyze the contents input by the users, followed by
+    //Use the IBM Watson AI to analyze the contents input by the users
     public Set<String> getWords(String content) {
         Set<String> words = new HashSet<>();
         try{

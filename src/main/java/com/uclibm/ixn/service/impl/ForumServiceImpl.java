@@ -87,6 +87,8 @@ public class ForumServiceImpl implements ForumService {
 
     /**
      * @inheritDoc
+     * Notice: this method is invoked when there are no comments for this post,
+     * in comparision with the adminDeletePostById, which deletes all the comments along with the post
      */
     @Override
     public Boolean deletePostById(Integer id) {

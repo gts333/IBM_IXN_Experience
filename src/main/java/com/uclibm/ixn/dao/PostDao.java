@@ -12,16 +12,18 @@ import java.util.List;
 public interface PostDao {
     /**
      *
-     * @return the total number of posts
-     */
-    Integer getPostCounts();
-
-    /**
-     *
      * @param post the post to be added
      * @return the number of lines affected
      */
     Integer addPost(Post post);
+
+    /**
+     *
+     * @return the total number of posts
+     */
+    Integer getPostCounts();
+
+
 
     /**
      *
