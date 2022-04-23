@@ -1,7 +1,5 @@
 package com.uclibm.ixn.controller;
 
-
-
 import com.uclibm.ixn.domain.News;
 import com.uclibm.ixn.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,9 +36,5 @@ public class NewsController {
     public void setNewsService(NewsService NewsService) {
         this.NewsService = NewsService;
     }
-
-
-
-
 
 }

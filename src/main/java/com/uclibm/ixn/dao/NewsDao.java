@@ -28,7 +28,10 @@ public interface NewsDao {
      */
     Integer deleteNewsByTitle(@Param("title")String title);
 
+    /**
+     * get news by its topic
+     * @param topic the topic to be searched
+     * @return a list of News whose topic contain the searched topic
+     */
     List<News> getNewsByTopic(@Param("topic")String topic);
-
-
 }

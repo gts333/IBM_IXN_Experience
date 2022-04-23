@@ -9,7 +9,6 @@ import com.uclibm.ixn.service.UserInputService;
 import com.uclibm.ixn.util.MapUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.thymeleaf.util.MapUtils;
 
 import java.util.*;
 

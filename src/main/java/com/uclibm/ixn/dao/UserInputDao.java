@@ -1,6 +1,5 @@
 package com.uclibm.ixn.dao;
 
-import com.uclibm.ixn.domain.Project;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;

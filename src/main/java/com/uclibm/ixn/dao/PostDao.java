@@ -23,8 +23,6 @@ public interface PostDao {
      */
     Integer getPostCounts();
 
-
-
     /**
      *
      * @param id the id of the post

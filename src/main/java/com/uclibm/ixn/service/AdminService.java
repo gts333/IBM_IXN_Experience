@@ -9,6 +9,4 @@ public interface AdminService {
      * @return true if the record matches
      */
     Boolean adminLogin(String username, String password);
-
-
 }

@@ -1,6 +1,5 @@
 package com.uclibm.ixn.dao;
 
-import com.uclibm.ixn.domain.News;
 import com.uclibm.ixn.domain.Project;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -29,7 +28,10 @@ public interface ProjectDao {
      */
     Integer deleteProjectByTitle(@Param("title")String title);
 
+    /**
+     * get projects by its topic
+     * @param topic the topic to be searched
+     * @return a list of Projects whose topic contain the searched topic
+     */
     List<Project> getProjectsByTopic(@Param("topic")String topic);
-
-
 }

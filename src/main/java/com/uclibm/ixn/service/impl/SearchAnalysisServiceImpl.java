@@ -1,7 +1,6 @@
 package com.uclibm.ixn.service.impl;
 
 import com.ibm.cloud.sdk.core.security.IamAuthenticator;
-import com.ibm.cloud.sdk.core.service.exception.ServiceResponseException;
 import com.ibm.watson.natural_language_understanding.v1.NaturalLanguageUnderstanding;
 import com.ibm.watson.natural_language_understanding.v1.model.*;
 import com.uclibm.ixn.config.WatsonConfig;

@@ -2,11 +2,9 @@ package com.uclibm.ixn.controller;
 
 import com.uclibm.ixn.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -40,7 +38,5 @@ public class SearchController {
     public void setUserInputService(UserInputService userInputService) {
         this.userInputService = userInputService;
     }
-
-
 
 }

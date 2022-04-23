@@ -1,6 +1,5 @@
 package com.uclibm.ixn.service;
 
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -19,9 +18,5 @@ public interface SearchAnalysisService {
      * @return the result map, key being the description, value being the link
      */
     Map<String, String> getResults(Set<String> words);
-
-
-
-
 
 }

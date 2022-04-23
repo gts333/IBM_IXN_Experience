@@ -28,7 +28,10 @@ public interface InfoDao {
      */
     Integer deleteInfoByTopic(@Param("topic")String topic);
 
+    /**
+     *
+     * @param topic topic to be searched
+     * @return a list of infos whose topic contains the searched topic
+     */
     List<Info> getInfosByTopic(@Param("topic")String topic);
-
-
 }
